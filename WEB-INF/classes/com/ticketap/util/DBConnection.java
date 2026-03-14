@@ -13,9 +13,11 @@ public class DBConnection {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // DB details (change password if needed)
-            String url = "jdbc:mysql://localhost:3306/ticketap?useSSL=false&serverTimezone=UTC";
-            String user = "root";
-            String password = "sridhar123SS";  // <-- change this
+           Connection con = DriverManager.getConnection(
+"jdbc:mysql://sql12.freesqldatabase.com:3306/sql12819964",
+"sql12819964",
+"1Dt4GyslnB"
+); // <-- change this
 
             con = DriverManager.getConnection(url, user, password);
 
