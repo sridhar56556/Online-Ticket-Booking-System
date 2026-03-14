@@ -4,10 +4,11 @@ import java.io.*;
 import java.sql.*;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import com.ticketap.util.DBConnection;
-
+    @WebServlet("/signup")
 public class SignupServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res)

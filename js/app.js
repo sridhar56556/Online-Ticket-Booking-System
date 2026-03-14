@@ -196,12 +196,11 @@ function handleSignup(event) {
         return;
     }
 
-    fetch('signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `name=${encodeURIComponent(name)}&mobile=${encodeURIComponent(mobile)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
-    })
-    .then(async res => {
+   fetch('/ticketap/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `name=${encodeURIComponent(name)}&mobile=${encodeURIComponent(mobile)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+})    .then(async res => {
         if (!res.ok) {
             const msg = await res.text();
             showToast(msg || "Signup failed", "danger");
@@ -234,7 +233,7 @@ function handleLogin(event) {
     const email = document.getElementById("loginUsername").value.trim();
     const password = document.getElementById("loginPassword").value;
 
-    fetch("login", {
+    fetch("/ticketap/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
@@ -655,7 +654,7 @@ function handleBookingSubmit() {
     formData.append("payment", paymentMethod);
 
     // 2️⃣ Send to MySQL
-    fetch("bookTicket", {
+    fetch("/ticketap/bookTicket", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"

@@ -77,8 +77,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Gmail</label>
-                                            <input type="email" class="form-control" id="signupEmail" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" placeholder="example@gmail.com" required>
-                                        </div>
+                                            <input type="email" class="form-control" id="signupEmail" placeholder="example@gmail.com" required>                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label">Password</label>
                                             <input type="password" class="form-control" id="signupPassword" minlength="6" required>
